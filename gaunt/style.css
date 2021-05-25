@@ -1,0 +1,55 @@
+/* .main {
+   margin: 0 auto;
+   text-align: center;
+   width: 50%;
+} */
+
+.row {
+   display: flex;
+   padding-bottom: 10%;
+   position: absolute;
+   top: calc(50% - 2.5rem);
+   left: 50%;
+   transform: translate3d(-50%, -50%, 0);
+   float: left;
+}
+
+.info {
+   margin: auto;
+   text-align: center;
+}
+
+div h2 {
+   padding-right: 1em;
+}
+
+li{
+   margin-left: 1em;
+}
+
+.column:first-child {
+   margin-right: 1em;
+}
+
+.column {
+   flex: 50%; 
+}
+
+.callList {
+   display: none;
+}
+
+.hands {
+   display: none;
+   position: absolute;
+   top: calc(50% + 1.5rem);
+   left: 50%;
+   transform: translate3d(-50%, -50%, 0);
+}
+
+.reminder {
+   display: none;
+   float: left;
+   position: absolute;
+   top: calc(50% - 2.5rem);
+}

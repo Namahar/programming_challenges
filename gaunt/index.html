@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+
+<html>
+   <head>
+      <meta charset="utf-8">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+     
+      <link rel="stylesheet" href="style.css"></a>  
+      <link rel="stylesheet" href="node_modules/deck-of-cards/example/example.css">
+      
+      <title>Gaunt</title>   
+		
+   </head>
+   
+   <body>
+      <script src="node_modules/deck-of-cards/dist/deck.js"></script>
+
+      <div id="container">
+          
+         <!-- required prevents empty submission -->
+
+         <form id="userInfo" class="formStyle">
+            <label for="name">Enter a Username:</label>
+            <input type="text" id="name" required>
+            <br>
+            <br>
+
+            <!-- name attribute to make sure only one input is checked -->
+            <input type="radio" id="t1" name="teams" value="0">
+            <label for="t1">Select Team 1</label>
+            <br>
+
+            <input type="radio" id="t2" name="teams" value="1">
+            <label for="t2">Select Team 2</label>
+
+            <br><br>
+
+            <button type="button" id="start">Start Game</button>
+
+         </form>
+
+      </div>  
+
+      <div id="header">
+         <h3 class="info" id="infoUpdate"></h3>
+
+         <div class="reminder" id="teams">
+            <div class="column" id="tone"><h4>Team 1</h4></div>
+            <div class="column" id="ttwo"><h4>Team 2</h4></div>
+         </div>
+
+      </div>
+
+      <div class="row" id="teamList">
+         <div class="column" id="team1"><h2>Team 1</h2></div>
+         <div class="column" id="team2"><h2>Team 2</h2></div>
+      </div>
+
+      <form id="numHands" class="hands">
+         <label for="text">Call Hands</label>
+         <input type="number" id="handVal" min="0" max="8" required>
+         <br>
+         <br>
+
+         <button type="button" id="userHands">Call</button>
+      </form>
+
+      <form class="hands" id="cut">
+         <button type="button" class="cutChoice" name="suit" value="0">Spades</button>
+
+         <button type="button" class="cutChoice" name="suit" value="1">Hearts</button>
+
+         <button type="button" class="cutChoice" name="suit" value="2">Clubs</button>
+
+         <button type="button" class="cutChoice" name="suit" value="3">Diamonds</button>
+      </form>
+
+
+      <script src="client.js"></script>
+   </body>
+</html>

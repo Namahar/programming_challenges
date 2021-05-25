@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Cards</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="node_modules/deck-of-cards/example/example.css">
+    </head>
+    <body>
+        <script src="node_modules/deck-of-cards/dist/deck.js"></script>
+
+        <div id="container"></div>        
+
+        <script>
+
+        
+            var $container = document.getElementById('container');
+
+            // create Deck
+            var deck = Deck();
+            deck.flip();
+
+            for (let i = 0; i < deck.cards.length; i++) {
+               var c = deck.cards[i];
+               console.log(c);
+            }
+
+            // add to DOM
+            deck.mount($container);
+
+            // for (let i = 0; i < deck.cards.length; i++) {
+            //    var card = deck.cards[i];
+            //    console.log(card);
+
+            //    card.animateTo({
+            //       delay: 500 + i * 100,
+            //       duration: 200,
+            //       ease: 'linear',
+            //       x: 100,
+            //       y: 100
+            //    });
+
+            // }
+
+
+            // // remove 2's from deck
+            // for (let i = 0; i < deck.cards.length; i++) {
+            //    if (deck.cards[i]['rank'] == 2) {
+            //       var two = deck.cards.splice(i, 1);
+            //       two[0].unmount();
+            //    }
+            // }
+
+            
+
+            // // shuffle animation
+            // // for (let i = 0; i < 5; i++) {
+            // //    deck.shuffle();
+            // // }
+
+            // deck.shuffle();
+
+            // // coordinates for dealing
+            // var w = window.innerWidth;
+            // var h = window.innerHeight;
+            // coordinates = [ [w, 0],
+            //                 [w, -h],
+            //                 [-w, -h],
+            //                 [-w, 0],
+            //                 [-w, h],
+            //                 [w, h]]
+
+            // // deal cards
+            // var start = 0;
+            // for (let i = 0; i < 6; i++) {
+            //    var loc = coordinates[i];
+
+            //    for (let j = 0; j < 8; j++) {
+
+            //       card = deck.cards[start];
+
+            //       card.animateTo({
+            //          delay: 500 + start * 100,
+            //          duration: 200,
+            //          ease: 'linear',
+            //          x: loc[0],
+            //          y: loc[1]
+            //       });
+
+            //       start += 1;
+            //    }
+            // }
+            // // end deal cards
+
+
+        </script>
+    </body>
+</html>
